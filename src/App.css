@@ -1,38 +1,652 @@
-.App {
-  text-align: center;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+i {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  transition: all 0.5s ease-in-out;
+  z-index: 999999;
+}
+
+.contactusmenu {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactusmenu h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.contactusmenu i {
+  font-size: 20px;
+}
+
+.guccilogo {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guccilogo img {
+  width: 70%;
+  position: absolute;
+  top: -100px;
+  left: 15%;
+  transition: all 0.5s ease-in;
+}
+
+.menuicons {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999999;
+}
+
+.menuicons i {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.menuicons i:nth-child(4) {
+  font-size: 24px;
+  height: 30px;
+}
+
+.menuicons span {
+  margin-left: 2px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.firstads {
+  height: 200vh;
+  width: 100vw;
+}
+
+.firstads .firsttext {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  flex-direction: column;
+}
+
+.firstads .secondtext {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  flex-direction: column;
+}
+
+.secondtext p {
+  width: 49%;
+  margin: 40px auto; 
+  display: flex;
+  justify-content: center; 
+  text-align: center;
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.secondtext a {
+  font-weight: 500;
+}
+
+
+.firstads img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -444;
+  object-fit: cover;
+}
+
+.lineover {
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.seconddiv {
+  height: 200vh;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.giftsforwho button {
+  border: none;
+  background: transparent;
+  position: relative;
+  color: rgb(83, 83, 83);
+}
+
+.giftsforwho .line {
+  background-color: black;
+  left: 0;
+  height: 1px;
+  bottom: -7px;
+}
+
+.photocollection {
+  width: 90%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.photocollection .firstphotos,.photocollection .secondphotos {
+  width: 50%;
+  height: 120vh;
+}
+
+.photocollection .firstphotos img ,.photocollection .secondphotos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  scale: 1;
+}
+
+.photocollection .firstphotos img:hover ,.photocollection .secondphotos img:hover {
+  scale: 1.02;
+} 
+
+.photocollection .firstphotos {
+  margin-right: 10px;
+}
+
+.firstphotoskid {
+  width: 100%;
+  height: 80vh;
+  background-color: gray;
+  border-radius: 5px;
+  margin-bottom: 10px;
+} 
+
+.secondphotos .firstphotoskid {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.othertwophotos {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  height: 40%;
+  width: 100%;
+}
+
+.othertwophotos .twootherphotos {
+  border-radius: 5px;
+  background-color: violet;
+}
+
+.thirddiv {
+  width: 100%;
+  height: 120vh;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.thirdcontainer {
+  background-image: url(https://media.gucci.com/dynamic/b3c8/+2tlqyH+bEfund3aFLJndZaLGhNzcHH0tCyimsS6WeMugKA0SoRTTzGVRsShek6MhYcFGIX4YBTTG8OwxfGM3iG0K_Z+YDiBESTIEcB_5nhSSd6SMxamic75Qc7EEhqtJjqNvfzHwAJREycFCibqDcpgZLf9CBFQcmEotmvFtSmZwe+m1PLfC7GmCRL57k3blfL1clu_aHHKIbOzmh8mwOh2p4A4zMfR9b6MVsrX08qUYfZxNaIB4UY8opdeVoTrMCexL6tmgojT1kap8NCB+5v+6kpgmcIzWCkcSWt2DfFNJYylfBVWt__st7Ju+hZKf6rSjknb_OlRrmaX_I5PkLm9RTBSLJ8sD0dH9uX97ZqNDBa4bzefYKjx+n_T3hhq/HP_CinamaticLandscape_Gucci-GiftGiving-Oct24-ASE-240720-0011-1821_001_Default.png);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 5%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.thirdcontainer button {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(100px);
+  background-color:  rgba(255, 255, 255, 0.464);
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.thirdcontainer .thirdbuttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.thirdcontainer .thirdbuttons button {
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(7px);
+  padding: 15px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid white;
+  transition: transform 0.5s ease-in-out;
+  box-sizing: border-box; 
+  position: relative;
+}
+
+.thirdcontainer .thirdbuttons button span {
+  z-index: 2;
+  position: relative;
+}
+
+.thirdcontainer .thirdbuttons button:hover {
+  transform: scale(0.95); 
+}
+
+.thirdcontainer .thirdbuttons button:hover span {
+  transform: scale(1);
+}
+
+.fourthdiv {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 50px 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.videosndstories {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.videosndstories img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.videosndstories .storiesfacts {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  color: black;
+}
+
+.videosndstories .storiesfacts h1{
+  font-weight: 300;
+  font-family: "Rubik", sans-serif;
+}
+
+.storiesline{
+  color: black;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.maywehelpu {
+  width: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 700px;
+  background-color: white;
+  padding-top: 100px;
+  font-weight: 300;
+}
+
+.maywehelpu h2 {
+  font-weight: 400;
+}
+
+.maywehelpu p {
+  margin: 40px;
+}
+
+.maywehelpu button {
+  border: none;
+  background: transparent;
+  font-size: 13px;
+}
+
+.gucciservices h1 {
+  font-weight: 300;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoloop {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.videoloop .videooneloop {
+  width: 450px;
+  height: 700px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 300;
+  align-items: center;
+}
+
+.videooneloop video {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.videooneloop h2 {
+  margin-top: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.videooneloop p {
+  width: 85%;
+  margin: 20px 0px;
+}
+
+.videooneloop a {
+  font-weight: 400;
+}
+
+.signupgucci {
+  height: 400px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: transparent;
+  transition: all 0.5s ease-in;
+  margin: 0;
+}
+
+.signupgucci:hover {
+  background-color: black;
+  color: white;
+}
+
+.signupgucci:hover button {
+  color: white;
+}
+
+.signupgucci h3 {
+  font-size: 20px;
+}
+
+.signupgucci p {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.signupgucci button {
+  border: none;
+  background: transparent;
+  transition: all 0.5s ease-in;
+}
+
+.footer {
+  width: 100vw;
+  height: auto;
+  padding: 50px 50px 0 50px;
+  background-color: black;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer .companiesinfos {
+  width: 50%;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+
+.footer .storelocator {
+  width: 50%;
+  height: 90vh;
+}
+
+.companies h6 {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 30px;
+}
+
+.companies p {
+  font-size: 12px;
+  text-decoration: underline;
+  text-decoration-color: white;
+  cursor: pointer;
+}
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0 0;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 50px;
+  margin-top: 15px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 15px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 12px;
+  color: #38caef;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+.storelocator h6 {
+  font-size: 12px;
+  color: gray;
+  margin: 0;
+}
+
+.storelocator p {
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.guccilogofooter {
+  width: 100vw;
+  height: 300px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.guccilogofooter svg {
+  fill: white;
+  padding: 0 100px;
+}
+
+.menuoptions {
+  width: 100vw;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.192);
+  position: absolute;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  transition: all 0.5s ease-in-out;
+}
+
+.slidebar {
+  height: 100%;
+  width: 30%;
+  background-color: white;
+  transition: all 1s ease-in-out;
+}
+
+.slidebar a {
+  color: black;
+  display: block;
+  margin: 30px 9%;
+  text-decoration: underline;
+}
+
+.closemenubtn {
+  border: none;
+  background: transparent;
+  font-size: 40px;
+  margin-left: 85%;
+  margin-top: 10px;
+}
+
+.mainmennuUl {
+  list-style: none;
+  font-size: 20px;
+}
+
+.mainmennuUl li,.extraMenu li {
+  margin: 20px;
+  cursor: pointer;
+  display: flex;
+}
+
+.mainmennuUl li i,.extraMenu li i {
+  font-size: 25px;
+  width: 25px;
+  transition: all 0.2s ease-in;
+}
+
+.extraMenu {
+  list-style: none;
 }
